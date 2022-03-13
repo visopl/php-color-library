@@ -38,20 +38,20 @@ echo $factory->create('hsl', ['hue' => 178, 'saturation' => 41, 'lightness' => 2
 $factory = new Visopl\Color\Factory\ConverterFactory();
 
 // aliceblue - it is working only if color is defined in Visopl\Color\Color::$colors list
-echo $factory->createHexToText('hex-to-text', '#F0F8FF'); 
+echo $factory->create('hex-to-text', '#F0F8FF'); 
 
 // #F0F8FF - it is working only if color is defined in Visopl\Color\Color::$colors list
-echo $factory->createTextToHex('text-to-hex', 'aliceblue');
+echo $factory->create('text-to-hex', 'aliceblue');
 
 // rgb(37, 89, 87)
-echo $factory->createHexToRgb('hex-to-rgb', '#255957'); 
+echo $factory->create('hex-to-rgb', '#255957'); 
 
 // rgba(37, 89, 87, 0.75)
-echo $factory->createHexToRgb('hex-to-rgb', '#255957BF');
+echo $factory->create('hex-to-rgb', '#255957BF');
 
 // #255957
-echo $factory->createRgbToHex('rgb-to-hex', 'rgb(37, 89, 87)');
+echo $factory->create('rgb-to-hex', 'rgb(37, 89, 87)');
 
 // #255957BF
-echo $factory->createRgbToHex('rgb-to-hex', 'rgba(37, 89, 87, 0.75)');
+echo $factory->create('rgb-to-hex', 'rgba(37, 89, 87, 0.75)');
 ```
