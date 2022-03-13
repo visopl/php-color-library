@@ -17,13 +17,13 @@ class RgbToHexConverter extends BaseConverter
         $mapper = $parser->parse();
 
         $data = [
-            'red' => $this->replaceZeroValue(dechex($mapper->getRed())), 
-            'green' => $this->replaceZeroValue(dechex($mapper->getGreen())), 
-            'blue' => $this->replaceZeroValue(dechex($mapper->getBlue()))
+            BuilderFactory::RED => $this->replaceZeroValue(dechex($mapper->getRed())), 
+            BuilderFactory::GREEN => $this->replaceZeroValue(dechex($mapper->getGreen())), 
+            BuilderFactory::BLUE => $this->replaceZeroValue(dechex($mapper->getBlue()))
         ];
 
         if ($mapper->hasAlpha()) {
-            $data['alpha'] = $this->replaceZeroValue(dechex(round($mapper->getAlpha() * 255))); 
+            $data[BuilderFactory::ALPHA] = $this->replaceZeroValue(dechex(round($mapper->getAlpha() * 255))); 
         }
 
         $factory = new BuilderFactory();
